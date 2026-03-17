@@ -1,0 +1,19 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20-games-challenge--2--jetpack-joyride", "20-games-challenge--2--jetpack-joyride.csproj", "{5BDFE0F7-5E61-41C0-B3F1-C476D8B0575D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	ExportDebug|Any CPU = ExportDebug|Any CPU
+	ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5BDFE0F7-5E61-41C0-B3F1-C476D8B0575D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BDFE0F7-5E61-41C0-B3F1-C476D8B0575D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BDFE0F7-5E61-41C0-B3F1-C476D8B0575D}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{5BDFE0F7-5E61-41C0-B3F1-C476D8B0575D}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{5BDFE0F7-5E61-41C0-B3F1-C476D8B0575D}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{5BDFE0F7-5E61-41C0-B3F1-C476D8B0575D}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal
