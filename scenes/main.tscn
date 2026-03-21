@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://b01j2kjlvxlio"]
+
+[ext_resource type="PackedScene" uid="uid://cgj211lhusmvy" path="res://scenes/obstacle.tscn" id="1_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://b4btuepnqgeok" path="res://scenes/player.tscn" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://c28toiuu66f4m" path="res://scripts/ObstacleSpawner.cs" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://dpdjqmy2qrxfo" path="res://scenes/gameover_screen.tscn" id="4_jyhfs"]
+
+[sub_resource type="Gradient" id="Gradient_o5qli"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0.34407526, 0.3440759, 0.34407574, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_0wfyh"]
+gradient = SubResource("Gradient_o5qli")
+width = 250
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0wfyh"]
+size = Vector2(1172, 30)
+
+[sub_resource type="Gradient" id="Gradient_sugp2"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0.1835902, 0.1835905, 0.18359044, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_jyhfs"]
+gradient = SubResource("Gradient_sugp2")
+width = 250
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o5qli"]
+size = Vector2(1172, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sugp2"]
+size = Vector2(136.5, 432.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jyhfs"]
+size = Vector2(60.25, 938)
+
+[node name="main" type="Node" unique_id=1430468044]
+
+[node name="ceiling" type="Node2D" parent="." unique_id=1165460662]
+position = Vector2(572, 19)
+
+[node name="Sprite2D" type="Sprite2D" parent="ceiling" unique_id=277010784]
+position = Vector2(2, -8)
+scale = Vector2(4.760003, 61.159996)
+texture = SubResource("GradientTexture1D_0wfyh")
+
+[node name="CollisionShape2D" type="StaticBody2D" parent="ceiling" unique_id=337386653]
+position = Vector2(0, 11)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ceiling/CollisionShape2D" unique_id=2132230408]
+position = Vector2(1, -5)
+shape = SubResource("RectangleShape2D_0wfyh")
+
+[node name="floor" type="Node2D" parent="." unique_id=395624432]
+position = Vector2(572, 644)
+
+[node name="Sprite2D" type="Sprite2D" parent="floor" unique_id=398723674]
+position = Vector2(2, -8)
+scale = Vector2(4.760003, 61.159996)
+texture = SubResource("GradientTexture1D_jyhfs")
+
+[node name="CollisionShape2D" type="StaticBody2D" parent="floor" unique_id=656422906]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/CollisionShape2D" unique_id=328579902]
+position = Vector2(1, -5)
+shape = SubResource("RectangleShape2D_o5qli")
+
+[node name="Player" parent="." unique_id=1645064964 instance=ExtResource("1_o5qli")]
+position = Vector2(274, 263)
+
+[node name="obstacle_spawner" type="Node2D" parent="." unique_id=902553147]
+position = Vector2(1268, 246)
+script = ExtResource("2_0wfyh")
+_obstacleScene = ExtResource("1_0wfyh")
+
+[node name="spawn_area" type="Area2D" parent="obstacle_spawner" unique_id=76302734]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="obstacle_spawner/spawn_area" unique_id=561662683]
+position = Vector2(-33, 77)
+shape = SubResource("RectangleShape2D_sugp2")
+
+[node name="despawn_area" type="Area2D" parent="obstacle_spawner" unique_id=197532735]
+position = Vector2(-1328, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="obstacle_spawner/despawn_area" unique_id=1499056520]
+position = Vector2(-99, 60)
+shape = SubResource("RectangleShape2D_jyhfs")
+
+[node name="HUD" type="Control" parent="." unique_id=791979129]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GameOverScreen" parent="." unique_id=1266397589 instance=ExtResource("4_jyhfs")]
