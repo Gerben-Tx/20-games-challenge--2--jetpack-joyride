@@ -24,7 +24,7 @@ The challenge helps build core skills progressively.
 - [x] The score increases with distance. The goal is to beat your previous score, so the high score should be displayed alongside the current score.
 
 Stretch goals:
-- [ ] Save the high score between play sessions.
+- [x] Save the high score between play sessions.
 - [ ] The jetpack is a machine gun! Add bullet objects that spew from your character when the input is held.
   - [ ] Particle effects are a fun way to add game juice. Mess around with some here, making explosions or sparks when things get destroyed!
 
