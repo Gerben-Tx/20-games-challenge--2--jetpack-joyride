@@ -14,7 +14,7 @@ font_size = 45
 [sub_resource type="LabelSettings" id="LabelSettings_fggc0"]
 font_size = 32
 
-[node name="GameOverScreen" type="Control" unique_id=1266397589]
+[node name="GameOverScreen" type="Control" unique_id=1266397589 node_paths=PackedStringArray("ScoreLabel", "BestScoreLabel")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,6 +22,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_23pkr")
+ScoreLabel = NodePath("VBoxContainer/HBoxContainer/HBoxContainer/Score")
+BestScoreLabel = NodePath("VBoxContainer/HBoxContainer2/HBoxContainer/BestScore")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1773578947]
 layout_mode = 0
@@ -56,16 +58,60 @@ offset_left = -161.0
 offset_top = -71.5
 offset_right = 161.0
 offset_bottom = 71.5
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Score" type="Label" parent="VBoxContainer" unique_id=1324098847]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1596392030]
 layout_mode = 2
-text = "Distance: 00"
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=2132585433]
+layout_mode = 2
+text = "Distance:"
 label_settings = SubResource("LabelSettings_23pkr")
 horizontal_alignment = 1
 
-[node name="BestScore" type="Label" parent="VBoxContainer" unique_id=168126794]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer" unique_id=1987858229]
 layout_mode = 2
-text = "Best: 00"
+theme_override_constants/separation = 0
+
+[node name="Score" type="Label" parent="VBoxContainer/HBoxContainer/HBoxContainer" unique_id=1324098847]
+layout_mode = 2
+text = "00"
+label_settings = SubResource("LabelSettings_23pkr")
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/HBoxContainer" unique_id=1246256191]
+layout_mode = 2
+text = "m"
+label_settings = SubResource("LabelSettings_23pkr")
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=2108985086]
+layout_mode = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2" unique_id=1134332685]
+layout_mode = 2
+text = "Best:"
+label_settings = SubResource("LabelSettings_3fhia")
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer2" unique_id=1398287970]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="BestScore" type="Label" parent="VBoxContainer/HBoxContainer2/HBoxContainer" unique_id=168126794]
+layout_mode = 2
+text = "00"
+label_settings = SubResource("LabelSettings_3fhia")
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2/HBoxContainer" unique_id=1286029180]
+layout_mode = 2
+text = "m"
 label_settings = SubResource("LabelSettings_3fhia")
 horizontal_alignment = 1
 

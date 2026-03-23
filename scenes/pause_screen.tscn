@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://3sen3ph0efst"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_choun"]
+font_size = 64
+
+[sub_resource type="LabelSettings" id="LabelSettings_ya4ey"]
+font_size = 32
+
+[node name="PauseScreen" type="Control" unique_id=989792079]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1326026979]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.14901961, 0.14901961, 0.14901961, 0.58431375)
+
+[node name="Label" type="Label" parent="." unique_id=638714998]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -177.0
+offset_top = 161.0
+offset_right = 177.0
+offset_bottom = 249.0
+grow_horizontal = 2
+text = "Paused"
+label_settings = SubResource("LabelSettings_choun")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=1096191674]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -133.5
+offset_top = -69.0
+offset_right = 133.5
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Press ESC to continue"
+label_settings = SubResource("LabelSettings_ya4ey")
+horizontal_alignment = 1
