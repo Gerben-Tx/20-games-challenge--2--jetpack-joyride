@@ -1,16 +1,10 @@
 [gd_scene format=3 uid="uid://cgj211lhusmvy"]
 
 [ext_resource type="Script" uid="uid://dyeardvae2sic" path="res://scripts/Obstacle.cs" id="1_7ukg5"]
+[ext_resource type="Texture2D" uid="uid://crbq41hrgt1dv" path="res://textures/obstacle.png" id="2_drdry"]
 
-[sub_resource type="Gradient" id="Gradient_drdry"]
-offsets = PackedFloat32Array(0)
-colors = PackedColorArray(0, 0, 0, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_cjuko"]
-gradient = SubResource("Gradient_drdry")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sh7k1"]
-size = Vector2(30, 30)
+[sub_resource type="CircleShape2D" id="CircleShape2D_cjuko"]
+radius = 17.507141
 
 [node name="Obstacle" type="Node2D" unique_id=177435432]
 scale = Vector2(2, 2)
@@ -19,18 +13,8 @@ script = ExtResource("1_7ukg5")
 [node name="StaticBody2D" type="Area2D" parent="." unique_id=708816916]
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1346817227]
-scale = Vector2(0.11999738, 30.200003)
-texture = SubResource("GradientTexture1D_cjuko")
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_drdry")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=884551291]
-shape = SubResource("RectangleShape2D_sh7k1")
-
-[node name="StaticBody2D2" type="Area2D" parent="." unique_id=320148298]
-rotation = 0.7853982
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2" unique_id=1280586572]
-scale = Vector2(0.11999738, 30.200003)
-texture = SubResource("GradientTexture1D_cjuko")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1595605110]
-shape = SubResource("RectangleShape2D_sh7k1")
+shape = SubResource("CircleShape2D_cjuko")

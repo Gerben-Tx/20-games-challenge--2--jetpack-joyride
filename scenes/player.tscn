@@ -10,7 +10,7 @@ script = ExtResource("1_g2els")
 lock_rotation = true
 
 [node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=1089362000]
-scale = Vector2(0.112762235, 0.112762235)
+scale = Vector2(0.5199995, 0.5199995)
 texture = ExtResource("1_3vyb7")
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="RigidBody2D" unique_id=557077520]
