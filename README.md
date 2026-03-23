@@ -6,7 +6,9 @@ This Godot project is part of the **20 Games Challenge**, a learning journey to 
 > This game prioritizes learning over perfection. It's built for the "20 Games Challenge" and skips advanced best practices, optimizations, or production polish to focus on core mechanics and rapid iteration.
 
 ## Demo
-TODO
+https://github.com/user-attachments/assets/2936502f-a197-4115-999e-d182dd27a13c
+
+
 
 
 
